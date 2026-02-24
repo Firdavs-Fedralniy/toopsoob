@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace;
+}
+
+body {
+    background: #0f0f14;
+    color: white;
+}
+
+/* ================= TITLE ================= */
+
+.top__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 30px;
+
+    background: linear-gradient(
+        270deg,
+        #ff0000,
+        #000000,
+        #ffe600,
+        #000000,
+        #ff0000
+    );
+    background-size: 500% 500%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: titleGradient 6s ease infinite;
+}
+
+/* ================= TOP LIST ================= */
+
+#top {
+    margin: 40px 20px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Скролл красивый */
+#top::-webkit-scrollbar {
+    width: 6px;
+}
+
+#top::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+/* ================= USER CARD ================= */
+
+.user__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px;
+    margin-bottom: 15px;
+
+    background: #1a1a22;
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.user__wrapper:hover {
+    transform: translateY(-3px);
+    background: #222230;
+}
+
+.place {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffe600;
+}
+
+/* ================= AVATAR ================= */
+
+.user__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 3px;
+
+    background: linear-gradient(
+        270deg,
+        #2600ff,
+        #051eff,
+        #000000,
+        #2600ff
+    );
+    background-size: 600% 600%;
+    animation: gradientBorder 5s ease infinite;
+}
+
+.user__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* ================= INFO ================= */
+
+.user__top {
+    display: flex;
+    flex-direction: column;
+}
+
+.user__info {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user__stats {
+    font-size: 18px;
+    color: #00ffcc;
+}
+
+/* ================= BOTTOM NAV ================= */
+
+.down {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #14141b;
+    border-top: 1px solid #2a2a35;
+    padding: 10px 0;
+}
+
+.chat__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* каждый пункт */
+.nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* иконка */
+.chat__icon {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+/* hover эффект */
+.nav__item:hover {
+    color: #00ffcc;
+}
+
+.nav__item:hover .chat__icon {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* активная кнопка */
+.nav__item.active {
+    color: #00ffcc;
+}
+
+.nav__item.active .chat__icon {
+    opacity: 1;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes gradientBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes titleGradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
