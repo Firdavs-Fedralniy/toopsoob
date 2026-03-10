@@ -34,7 +34,7 @@ pool: asyncpg.Pool = None
 # ---------- INIT DB ----------
 async def init_db():
     global pool
-    pool = await asyncpg.create_pool(DATABASE_URL)
+    pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
 
     async with pool.acquire() as conn:
         # Основная таблица
