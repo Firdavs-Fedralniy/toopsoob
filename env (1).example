@@ -1,0 +1,4 @@
+# Скопируйте этот файл как .env и заполните значения
+
+BOT_TOKEN=ВАШ_ТОКЕН_СЮДА
+DATABASE_URL=postgresql://user:password@host:5432/dbname

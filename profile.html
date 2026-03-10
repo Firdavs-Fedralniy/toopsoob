@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <title>Profile</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+    <div class="profile__page">
+
+        <div class="profile__hero">
+            <div class="profile__avatar-wrap">
+                <div class="user__img prof__img">
+                    <img id="prof-avatar" src="as.png" alt="">
+                </div>
+            </div>
+            <h2 class="profile__name" id="prof-name">—</h2>
+            <span class="profile__username" id="prof-username">@—</span>
+        </div>
+
+        <div class="profile__cards">
+            <div class="stat__card">
+                <span class="stat__label">место в топе</span>
+                <span class="stat__value" id="prof-rank">#—</span>
+            </div>
+            <div class="stat__card">
+                <span class="stat__label">всего</span>
+                <span class="stat__value" id="prof-total">—</span>
+            </div>
+            <div class="stat__card">
+                <span class="stat__label">сегодня</span>
+                <span class="stat__value" id="prof-today">—</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="down">
+        <div class="chat__top">
+            <a href="./index.html" class="nav__item">
+                <img src="./fc321c0c-e1e4-4d57-9ce4-918e9e22e470_removalai_preview.png" class="chat__icon">
+                <p>Chat Top</p>
+            </a>
+            <a href="./mystats.html" class="nav__item">
+                <img src="./fc321c0c-e1e4-4d57-9ce4-918e9e22e470_removalai_preview.png" class="chat__icon">
+                <p>My Stats</p>
+            </a>
+            <a href="./profile.html" class="nav__item active">
+                <img src="./fc321c0c-e1e4-4d57-9ce4-918e9e22e470_removalai_preview.png" class="chat__icon">
+                <p>Profile</p>
+            </a>
+        </div>
+    </div>
+
+    <script src="./profile.js"></script>
+</body>
+</html>

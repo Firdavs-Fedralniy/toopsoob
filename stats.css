@@ -1,0 +1,74 @@
+.mystats__page {
+    padding: 30px 20px 100px;
+}
+
+.period__toggle {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.period__btn {
+    background: #1a1a22;
+    color: #888;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.period__btn.active {
+    background: #00ffcc;
+    color: #0f0f14;
+    font-weight: 700;
+}
+
+.period__btn:hover:not(.active) {
+    background: #222230;
+    color: #fff;
+}
+
+.chart__wrap {
+    background: #1a1a22;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.mystats__summary {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.stat__card {
+    background: #1a1a22;
+    border-radius: 14px;
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    transition: 0.3s ease;
+}
+
+.stat__card:hover {
+    background: #222230;
+    transform: translateY(-2px);
+}
+
+.stat__label {
+    font-size: 11px;
+    color: #555;
+}
+
+.stat__value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00ffcc;
+}
