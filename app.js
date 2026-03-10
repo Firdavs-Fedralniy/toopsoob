@@ -1,4 +1,4 @@
-fetch("http://localhost:8000/top")
+fetch("https://toopsoob.onrender.com/top")
   .then(r => r.json())
   .then(data => {
     const root = document.getElementById("top");

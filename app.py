@@ -11,7 +11,7 @@ import os
 # --------- CONFIG ----------
 TOKEN = os.getenv("BOT_TOKEN", "8382359692:AAG8CO0DScL8UJGfDbsXInSl1aDDbybQJT0")
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres.awsorzqukliabaefxwvj:assalamumoleykum@aws-1-ap-northeast-2.pooler.supabase.com:5432/postgres")
-WEBAPP_URL = os.getenv("WEBAPP_URL", "https://ВАШ_САЙТ.com")  # ← вставить URL сайта
+WEBAPP_URL = os.getenv("WEBAPP_URL", "https://toopsoob.vercel.app/index.html")  # ← вставить URL сайта
 
 # --------- BOT & DISPATCHER ----------
 bot = Bot(TOKEN)
@@ -243,13 +243,13 @@ async def count_messages(message: Message):
 async def main():
     await init_db()
 
-    # # Кнопка меню → Mini App
-    # await bot.set_chat_menu_button(
-    #     menu_button=MenuButtonWebApp(
-    #         text="📊 Статистика",
-    #         web_app=WebAppInfo(url=WEBAPP_URL)
-    #     )
-    # )
+    # Кнопка меню → Mini App
+    await bot.set_chat_menu_button(
+        menu_button=MenuButtonWebApp(
+            text="📊 Статистика",
+            web_app=WebAppInfo(url=WEBAPP_URL)
+        )
+    )
 
     print("✅ Бот + API запущены")
     await asyncio.gather(

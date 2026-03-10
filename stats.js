@@ -1,4 +1,4 @@
-const API = "http://localhost:8000";
+const API = "https://toopsoob.onrender.com/top";
 
 let chart = null;
 let userData = null;
