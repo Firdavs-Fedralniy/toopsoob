@@ -1,15 +1,16 @@
 const API = "https://toopsoob.onrender.com"; // ← заменить на Railway URL после деплоя
 
 async function loadProfile() {
-    // Получаем user_id из Telegram Mini App
     const tg = window.Telegram?.WebApp;
+    tg?.ready();
+    
     const user = tg?.initDataUnsafe?.user;
+    console.log("TG USER:", user); // посмотрим что приходит
+    
     const userId = user?.id;
 
     if (!userId) {
-        // Для теста в браузере — подставь свой user_id
-        console.warn("Нет Telegram user_id, используется тестовый");
-        loadData(5423348915); // ← вставь свой Telegram ID для теста
+        loadData(5423348915);
         return;
     }
 

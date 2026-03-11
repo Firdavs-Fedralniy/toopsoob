@@ -5,14 +5,19 @@ let userData = null;
 
 async function loadStats() {
     const tg = window.Telegram?.WebApp;
+    tg?.ready();
+    
     const user = tg?.initDataUnsafe?.user;
+    console.log("TG USER:", user); // посмотрим что приходит
+    
     const userId = user?.id;
 
     if (!userId) {
-        fetchData(5423348915); // ← ваш ID
+        loadData(5423348915);
         return;
     }
-    fetchData(userId);
+
+    loadData(userId);
 }
 
 async function fetchData(userId) {
