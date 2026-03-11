@@ -3,6 +3,7 @@ const API = "https://toopsoob.onrender.com"; // ← заменить на Railwa
 async function loadProfile() {
     const tg = window.Telegram?.WebApp;
     tg?.ready();
+     tg?.expand(); 
 
     // Способ 2 — парсим initData вручную
     const params = new URLSearchParams(tg?.initData);
