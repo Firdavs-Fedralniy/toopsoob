@@ -3,11 +3,14 @@ const API = "https://toopsoob.onrender.com"; // ← заменить на Railwa
 async function loadProfile() {
     const tg = window.Telegram?.WebApp;
     tg?.ready();
-    
-    const user = tg?.initDataUnsafe?.user;
-    console.log("TG USER:", user); // посмотрим что приходит
-    
+
+    // Способ 2 — парсим initData вручную
+    const params = new URLSearchParams(tg?.initData);
+    const userStr = params.get("user");
+    const user = userStr ? JSON.parse(userStr) : null;
     const userId = user?.id;
+
+    console.log("USER ID:", userId);
 
     if (!userId) {
         loadData(5423348915);
