@@ -1,4 +1,4 @@
-const API = "https://toopsoob.onrender.com/top"; // ← заменить на Railway URL после деплоя
+const API = "https://toopsoob.onrender.com"; // ← заменить на Railway URL после деплоя
 
 async function loadProfile() {
     // Получаем user_id из Telegram Mini App

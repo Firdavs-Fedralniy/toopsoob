@@ -1,4 +1,4 @@
-const API = "https://toopsoob.onrender.com/top";
+const API = "https://toopsoob.onrender.com";
 
 let chart = null;
 let userData = null;
